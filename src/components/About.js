@@ -1,34 +1,42 @@
-import React,{useState} from 'react'
+import React from 'react'
 
-export default function About() {
-    const[btntxt,setBtn]=useState('Enable Dark Mode');
-    const[myStyle,setMyStyle]=useState({
-        color:'black',
-        backgroundColor:'white'
-    })
-    const toggleClick=()=>{
-        if(myStyle.color ==='black'){
-            setMyStyle({
-                color:'white',
-                backgroundColor:'black'
-            }) 
-            setBtn('Enable Light Mode') 
-        }else{
-            setMyStyle({
-                color:'black',
-                backgroundColor:'white'
-            }) 
-            setBtn('Enable Dark Mode') 
-        }
+export default function About(props) {
+    // const[btntxt,setBtn]=useState('Enable Dark Mode');
+    // const[myStyle,setMyStyle]=useState({
+    //     color:'black',
+    //     backgroundColor:'white'
+    // })
+    let myStyle={
+        color:props.mode==='dark'?'white':'black',
+        backgroundColor:props.mode==='dark'?'black':'white',
+    }
+    // const toggleClick=()=>{
+    //     if(myStyle.color ==='black'){
+    //         setMyStyle({
+    //             color:'white',
+    //             backgroundColor:'black'
+    //         }) 
+    //         setBtn('Enable Light Mode') 
+    //     }else{
+    //         setMyStyle({
+    //             color:'black',
+    //             backgroundColor:'white'
+    //         }) 
+    //         setBtn('Enable Dark Mode') 
+    //     }
+    // }
+    let mystyle={
+        color:props.mode==='dark'?'white':'black',
+        
     }
   return (
-    <div className='container' style={myStyle}>
-        <center><h1 className='my-3'>About Us</h1></center>
+    <div className='container' style={mystyle}>
+        <center><h1 className='my-3' >About Us</h1></center>
         <div className="accordion" id="accordionExample">
                 <div className="accordion-item"style={myStyle}>
                     <h2 className="accordion-header">
                     <button className="accordion-button" type="button"style={myStyle} data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Accordion Item #1
+                        Analyze Your Text
                     </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -43,7 +51,7 @@ export default function About() {
                 <div className="accordion-item"style={myStyle}>
                     <h2 className="accordion-header">
                     <button className="accordion-button collapsed" type="button"style={myStyle} data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Accordion Item #2
+                        Free To Use 
                     </button>
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -59,7 +67,7 @@ export default function About() {
                 <div className="accordion-item"style={myStyle}>
                     <h2 className="accordion-header">
                     <button className="accordion-button collapsed" type="button"style={myStyle} data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Accordion Item #3
+                        Browser Compatible
                     </button>
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -73,9 +81,9 @@ export default function About() {
                     </div>
                 </div>
          </div> 
-         <div className="container my-3">
+         {/* <div className="container my-3">
                     <center><button type="button" onClick={toggleClick} className="btn btn-info">{btntxt}</button></center>
-         </div>
+         </div> */}
     </div>
   )
 }

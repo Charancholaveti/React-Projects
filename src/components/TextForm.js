@@ -32,6 +32,7 @@ export default function TextForm(props) {
     const handleCopy = () => {
         navigator.clipboard.writeText(text);
         props.showAlert("Text copied to clipboard","success");
+        // document.getSelection().removeAllRanges();
     }
     const handleExtraSpace=()=>{
         let newtxt=text.split(/[ ]+/);
@@ -62,26 +63,26 @@ export default function TextForm(props) {
                 style={{backgroundColor:props.mode==='light'?'white':'black',color:props.mode==='light'?'black':'white'}}></textarea>
                 </div>
                 <center>
-                <button className="btn btn-outline-info mx-1"style={{width:'200px'}} onClick={handleUpClick}>Convert to Uppercase</button>
-                <button className="btn btn-outline-info mx-1" style={{width:'200px'} }onClick={handleLoClick}>Convert to Lowercase</button>
-                <button className="btn btn-outline-info mx-1" style={{width:'200px'}} onClick={handleCamelClick}>Convert to Camelcase</button>
-                <button className="btn btn-outline-info mx-1" style={{width:'200px'}} onClick={handleTitleClick}>Convert to Titlecase</button>
+                <button disabled={text.length===0}className="btn btn-info mx-1 my-1"style={{width:'200px'}} onClick={handleUpClick}>Convert to Uppercase</button>
+                <button disabled={text.length===0}className="btn btn-info mx-1 my-1" style={{width:'200px'} }onClick={handleLoClick}>Convert to Lowercase</button>
+                <button disabled={text.length===0}className="btn btn-info mx-1 my-1" style={{width:'200px'}} onClick={handleCamelClick}>Convert to Camelcase</button>
+                <button disabled={text.length===0}className="btn btn-info mx-1 my-1" style={{width:'200px'}} onClick={handleTitleClick}>Convert to Titlecase</button>
                 <br></br>
                 <br></br>
-                <button className="btn btn-outline-info mx-1" style={{width:'200px'}} onClick={handleAlternatingCase}>Alternating Case</button>
-                <button className="btn btn-outline-info mx-1" style={{width:'200px'}} onClick={handleExtraSpace}>Remove Extra Spaces</button>
-                <button className="btn btn-outline-info mx-1" style={{width:'200px'}} onClick={handleClearClick}>Clear text</button>
-                <button className="btn btn-outline-info mx-1" style={{width:'200px'}} onClick={handleCopy}>Copy text</button>
+                <button disabled={text.length===0}className="btn btn-info mx-1 my-1" style={{width:'200px'}} onClick={handleAlternatingCase}>Alternating Case</button>
+                <button disabled={text.length===0}className="btn btn-info mx-1 my-1" style={{width:'200px'}} onClick={handleExtraSpace}>Remove Extra Spaces</button>
+                <button disabled={text.length===0}className="btn btn-info mx-1 my-1" style={{width:'200px'}} onClick={handleClearClick}>Clear text</button>
+                <button disabled={text.length===0}className="btn btn-info mx-1 my-1" style={{width:'200px'}} onClick={handleCopy}>Copy text</button>
                 </center>
                
 
        </div>
        <div className="container my-3"style={{color:props.mode==='light'?'black':'white'}}>
         <h3>Your Text Summary:</h3>
-        <p><i>Word Count</i> : {text.split(' ').length} <b>|</b> <i>Character Count</i> : {text.length} <b>|</b> <i>Time to read</i>  : {0.008 * text.split(' ').length} minutes  </p>
+        <p><i>Word Count</i> : {text.split(' ').filter((element)=>{return element.length!==0}).length} <b>|</b> <i>Character Count</i> : {text.length} <b>|</b> <i>Time to read</i>  : {0.008 * text.split(' ').filter((element)=>{return element.length!==0}).length} minutes  </p>
         {/* <p>Your text requires {0.008 * text.split(' ').length} minutes to read</p> */}
         <h3>Preview</h3>
-        <p>{text.length>0?text:"Enter something in the above text box to preview it here"}</p>
+        <p>{text.length>0?text:"Nothing to preview"}</p>
        </div>
     </>
   )

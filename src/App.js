@@ -4,11 +4,13 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React,{useState} from 'react';
+
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
+
 function App() {
   const[mode,setMode]=useState('light');
   const[alert,setAlert]=useState(null);
@@ -36,7 +38,7 @@ function App() {
   return (
     <>
     <Router>
-              <Navbar title="TextUtils" about="About" mode={mode} toggleMode={handleToggleMode}/>
+              <Navbar title="StringStudio" about="About" mode={mode} toggleMode={handleToggleMode}/>
               <Alert alert={alert}/>
               <div className="container">
                     <Routes>   

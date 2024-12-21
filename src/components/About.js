@@ -41,10 +41,7 @@ export default function About(props) {
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate
-                         classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS 
-                         transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML 
-                         can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <strong>StringStudio gives you a way to analyze your text quickly and efficiently.Be it word count,character count or time to read your text </strong>
                     </div>
                     </div>
                 </div>
@@ -56,11 +53,7 @@ export default function About(props) {
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the 
-                        appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing
-                         and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also 
-                         worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit 
-                         overflow.
+                        <strong>StringStudio is a free character counter tool that provides instant character count & word count statistics for a given text.StringStudio reports the number of words and characters.Thus it is suitable for nwriting text with word/character limit.</strong>
                     </div>
                     </div>
                 </div>
@@ -72,11 +65,7 @@ export default function About(props) {
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the 
-                        appropriate classes that we use to style each element. These classes control the overall appearance, as well as the 
-                        showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. 
-                        It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition 
-                        does limit overflow.
+                        <strong>This wordcounter software works in any web browserssuch as Chrome,Firefox,Internet Explorer,Safari ,Opera.It suits to count characters in facebook , blog,books,excel document,pdf document,essays etc</strong>
                     </div>
                     </div>
                 </div>

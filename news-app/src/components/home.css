@@ -1,0 +1,34 @@
+/* Target Slick Slider and Images */
+
+/* Style the slider images */
+.slick-slide img {
+  width: 100%;        /* Make the image take full width */
+  height: auto;       /* Maintain aspect ratio */
+  object-fit: cover;  /* Ensure proper cropping without distortion */
+  border-radius: 10px; /* Preserve the rounded corners */
+}
+
+/* Make the slider responsive */
+@media (max-width: 768px) {
+  .slick-slide img {
+    max-height: 200px; /* Restrict height for smaller screens */
+  }
+}
+
+/* Adjust slider container width for smaller screens */
+@media (max-width: 768px) {
+  .slick-slider {
+    width: 90% !important;
+    margin: auto;
+  }
+}
+
+/* Optional: Style dots for better appearance */
+.slick-dots {
+  bottom: -20px !important; /* Adjust the position of the dots */
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 2; /* Ensure arrows are always on top */
+}

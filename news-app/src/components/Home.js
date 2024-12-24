@@ -52,8 +52,8 @@ export default class Home extends Component {
             ))}
           </Slider>
         </div>
-        <Link to="/general"><button type="button" className="btn btn-dark" style={{marginTop: "70px",width:"200px",height:"50px",fontSize:"larger",backgroundColor:"black"}}
->        General News</button></Link>
+        <Link to="/general"><button type="button" className="btn btn-outline-light" style={{marginTop: "70px",width:"200px",height:"50px",fontSize:"larger",backgroundColor:"black"}}
+>        Let's Start</button></Link>
 
       </div>
     );

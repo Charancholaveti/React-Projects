@@ -1,5 +1,5 @@
 const express = require('express');
-
+//creating router for notes
 const router =express.Router();
 
 router.get('/',(req,res)=>{

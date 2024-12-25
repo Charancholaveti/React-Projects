@@ -2,11 +2,16 @@
 
 # dependencies
 /node_modules
+
 /.pnp
 .pnp.js
 
 # testing
 /coverage
+# Ignore node_modules in cloudnest
+cloudnest/node_modules/
+
+
 
 # production
 /build

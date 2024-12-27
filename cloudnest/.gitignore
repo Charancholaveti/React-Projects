@@ -9,7 +9,7 @@
 # testing
 /coverage
 # Ignore node_modules in cloudnest
-cloudnest/node_modules/
+ cloudnest/node_modules/
 
 
 

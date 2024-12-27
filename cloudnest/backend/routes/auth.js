@@ -1,11 +1,11 @@
 const express = require("express");
-const User = require("../models/User");
+ const User = require("../models/User");
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { data } = require("react-router-dom");
-const user = require("../models/User");
+// const user = require("../models/User");
 const fetchUser =require('../middleware/fetchUser');
 
 const JWT_Secret="ch@r@nCholaveti";

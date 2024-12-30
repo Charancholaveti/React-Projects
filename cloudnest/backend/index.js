@@ -1,10 +1,12 @@
 const connectToMongo = require('./db');
 //Importing db to use connectMongo function
 const express = require('express');
+var cors = require('cors')
 //Calling the function to connect to the database
 connectToMongo();
 //Importing express
-const app = express()
+var app = express()
+app.use(cors())
 //we can use any port number
 const port =5000
 //Home route

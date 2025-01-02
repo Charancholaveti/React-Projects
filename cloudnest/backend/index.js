@@ -9,11 +9,6 @@ var app = express()
 app.use(cors())
 //we can use any port number
 const port =5000
-//Home route
-app.get('/', (req, res) => {
-  //Sending response to the client
-  res.send('Hello World!')
-})
 //Middleware
 app.use(express.json());
 //Available routes to use 

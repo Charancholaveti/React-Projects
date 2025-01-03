@@ -1,9 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
+    // eslint-disable-next-line
+    const amount = useSelector(state=>state.amount);
   return (
             <div>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar navbar-expand-lg  navbar-dark bg-dark">
              <div className="container-fluid">
             <a className="navbar-brand" href="/">Storage Bank</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +22,7 @@ const Navbar = () => {
                 </li>
             </ul>
             <div>
-                <button className="btn btn-primary">Your Balance:0</button>
+                <button className="btn btn-primary">Your Balance:{amount}</button>
             </div>
             </div>
         </div>
